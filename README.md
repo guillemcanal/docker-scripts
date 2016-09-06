@@ -28,7 +28,7 @@ Create an SSH agent and add a key.
 
 source .docker-functions.sh
 
-if container "ssh-agent" dont_exist;
+if container "ssh-agent" dont_exist;then
     docker run -u 1000 -d --restart always -v ssh-agent-data:/ssh --name=ssh-agent whilp/ssh-agent
 fi
 
